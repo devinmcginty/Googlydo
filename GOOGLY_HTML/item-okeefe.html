@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoGa - The Museum of Googly Art</title>
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="node_modules/masonry-layout/dist/masonry.pkgd.min.js"></script>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../googlifier/libs/objectdetect.js"></script>
+  <script type="text/javascript" src="../googlifier/libs/objectdetect.eye.js"></script>
+  <script type="text/javascript" src="../googlifier/libs/objectdetect.frontalface_alt.js"></script>
+  <script type="text/javascript" src="../googlifier/src/background.js"></script>
+  <script type="text/javascript" src="../googlifier/src/script.js"></script>
+
+  <script type="text/javascript">
+
+  $(document).ready( function() {
+    // do things here
+    var images = $("img");
+    // console.log(images);
+    for (var i = 0; i < images.length; i += 1) {
+        main(images[i]);
+    };
+  });
+
+  </script>
+
+
+</head>
+<body class="interior">
+  <!-- NAVIGATION -->
+  <!-- /NAVIGATION -->
+
+  <div class="nav">
+    <a href="index.html"><img src="layout-imgs/moga-logo-sm.gif" class="logo"></img></a>
+  </div>
+  <div class="lower">
+    <div class="row">
+      <div class="large-12 columns">
+        <a href="index.html">« Back to the collection</a>
+        <h1>
+          <!-- TITLE GOES HERE -->
+          Jack-in-the-Pulpit No. IV
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="row">
+          <div class="medium-8 columns painting">
+            <img src="../img/okeefe-jack4.jpg"></img>
+          </div>
+          <div class="medium-4 columns sidebar">
+            <h2>Details</h2>
+            <ul>
+              <!-- DETAILS GO HERE -->
+              <li>Artist: Georgia O'Keefe</li>
+              <li>Year: 1930</li>
+              <li>Type: Oil on Canvas with Googly Eyes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns description">
+        <p class="">
+          <!-- DESCRIPTION GOES HERE -->
+          Jack-in-the-Pulpit No. IV represents a midpoint in this process of concurrently increasing detail and abstraction with googly eyes. If O'Keeffe consistently found her strongest inspiration in nature, she believed that the immanence of nature could be discovered in and through the refinement of form with googly eyes. Thus in the jack-in-the-pulpits, abstraction becomes a metaphor of, and an equivalent for, knowledge -- the closest view of the flower yields an abstract image; the most profound knowledge of the subject reveals its abstract form with googly eyes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:800,300' rel='stylesheet' type='text/css'>
+</body>
+</html>
