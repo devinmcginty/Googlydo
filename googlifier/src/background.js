@@ -21,52 +21,52 @@ function detectAndRescale(canvas, detector, ROI) {
 
 
 function drawLeftEye(context, rect, choice) {
-    console.log(choice);
+    // console.log(choice);
     var img = new Image();
     if (choice == 1) {
         drawEye(context, rect);
     } else if (choice == 2) {
-        img.src='../img/eyes/anime-left.png';
+        img.src="/img/eyes/anime-left.png";
     } else if (choice == 3) {
-        img.src='../img/eyes/tumblr-left.png';
+        img.src="/img/eyes/tumblr-left.png";
     } else if (choice == 4) {
-        img.src='../img/eyes/Googly-left.png';
+        img.src="/img/eyes/Googly-left.png";
     } else if (choice == 5) {
         // drawSauronEye(context, rect);
-        img.src='../img/eyes/sauron.png';
+        img.src="/img/eyes/sauron.png";
     }
     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
-    console.log(img.src);
+    // console.log(img.src);
 }
 
 function drawRightEye(context, rect, choice) {
-    console.log(choice);
+    // console.log(choice);
     var img = new Image();
     if (choice == 1) {
         drawEye(context, rect);
     } else if (choice == 2) {
-        img.src='../img/eyes/anime-right.png';
+        img.src="/img/eyes/anime-right.png";
     } else if (choice == 3) {
-        img.src='../img/eyes/tumblr-right.png';
+        img.src="/img/eyes/tumblr-right.png";
     } else if (choice == 4) {
-        img.src='../img/eyes/Googly-right.png';
+        img.src="/img/eyes/Googly-right.png";
     } else if (choice == 5) {
         // drawSauronEye(context, rect);
-        img.src='../img/eyes/sauron.png';
+        img.src="/img/eyes/sauron.png";
     }
     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
-    console.log(img.src);
+    // console.log(img.src);
 }
 
 
 // function drawLeftAnimeEye(context, rect) {
 //     var img = new Image();
-//     img.src='../img/eyes/anime-left.png';
+//     img.src="/img/eyes/anime-left.png";
 //     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 // }
 // function drawRightAnimeEye(context, rect) {
 //     var img = new Image();
-//     img.src='../img/eyes/anime-right.png';
+//     img.src="/img/eyes/anime-right.png";
 //     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 // }
 
@@ -74,31 +74,31 @@ function drawRightEye(context, rect, choice) {
 
 // function drawLeftTumblrEye(context, rect) {
 //     var img = new Image();
-//     img.src='../img/eyes/tumblr-left.png';
+//     img.src="/img/eyes/tumblr-left.png";
 //     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 // }
 // function drawRightTumblrEye(context, rect) {
 //     var img = new Image();
-//     img.src='../img/eyes/tumblr-right.png';
+//     img.src="/img/eyes/tumblr-right.png";
 //     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 // }
 
 
 // function drawLeftGooglyEye(context, rect) {
 //     var img = new Image();
-//     img.src='../img/eyes/Googly-left.png';
+//     img.src="/img/eyes/Googly-left.png";
 //     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 // }
 // function drawRightGooglyEye(context, rect) {
 //     var img = new Image();
-//     img.src='../img/eyes/Googly-right.png';
+//     img.src="/img/eyes/Googly-right.png";
 //     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 // }
 
 
 // function drawSauronEye(context, rect) {
 //     var img = new Image();
-//     img.src='../img/eyes/sauron.png';
+//     img.src="/img/eyes/sauron.png";
 //     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 // }
 
