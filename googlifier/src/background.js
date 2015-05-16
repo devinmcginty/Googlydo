@@ -21,6 +21,7 @@ function detectAndRescale(canvas, detector, ROI) {
 
 
 function drawLeftEye(context, rect, choice) {
+    console.log(choice);
     if (choice == 1) {
         drawEye(context, rect);
     } else if (choice == 2) {
@@ -29,6 +30,7 @@ function drawLeftEye(context, rect, choice) {
 }
 
 function drawRightEye(context, rect, choice) {
+    console.log(choice);
     if (choice == 1) {
         drawEye(context, rect);
     } else if (choice == 2) {
@@ -41,8 +43,8 @@ function drawLeftAnimeEye(context, rect) {
     var img = new Image();
     img.src='img/eyes/anime-left.png'
     console.log(rect);
-    context.drawImage(img, rect[0], rect[0]+rect[2], rect[1], rect[1]+rect[3]);
-    //context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
+    //context.drawImage(img, rect[0], rect[0]+rect[2], rect[1], rect[1]+rect[3]);
+    context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 }
 
 
@@ -50,8 +52,8 @@ function drawRightAnimeEye(context, rect) {
     var img = new Image();
     img.src='img/eyes/anime-right.png'
     console.log(rect);
-    context.drawImage(img, rect[0], rect[0]+rect[2], rect[1], rect[1]+rect[3]);
-    //context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
+    //context.drawImage(img, rect[0], rect[0]+rect[2], rect[1], rect[1]+rect[3]);
+    context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 }
 
 
