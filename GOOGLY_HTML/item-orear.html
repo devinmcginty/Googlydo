@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoGa - The Museum of Googly Art</title>
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="node_modules/masonry-layout/dist/masonry.pkgd.min.js"></script>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../googlifier/libs/objectdetect.js"></script>
+  <script type="text/javascript" src="../googlifier/libs/objectdetect.eye.js"></script>
+  <script type="text/javascript" src="../googlifier/libs/objectdetect.frontalface_alt.js"></script>
+  <script type="text/javascript" src="../googlifier/src/background.js"></script>
+  <script type="text/javascript" src="../googlifier/src/script.js"></script>
+
+  <script type="text/javascript">
+
+  $(document).ready( function() {
+    // do things here
+    var images = $("img");
+    // console.log(images);
+    for (var i = 0; i < images.length; i += 1) {
+      main(images[i]);
+    };
+  });
+
+  </script>
+
+
+</head>
+<body class="interior">
+  <!-- NAVIGATION -->
+  <!-- /NAVIGATION -->
+
+  <div class="nav">
+    <a href="index.html"><img src="layout-imgs/moga-logo-sm.gif" class="logo"></img></a>
+  </div>
+  <div class="lower">
+    <div class="row">
+      <div class="large-12 columns">
+        <a href="index.html">« Back to the collection</a>
+        <h1>
+          <!-- TITLE GOES HERE -->
+          Afghan Girl
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="row">
+          <div class="medium-8 columns painting">
+            <img src="../img/charlesorear-afghangirl.jpg"></img>
+          </div>
+          <div class="medium-4 columns sidebar">
+            <h2>Details</h2>
+            <ul>
+              <!-- DETAILS GO HERE -->
+              <li>Artist: Steve McCurry</li>
+              <li>Year: 1984</li>
+              <li>Type: Film with Googly Eyes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns description">
+        <p class="">
+          <!-- DESCRIPTION GOES HERE -->
+          At the Nasir Bagh refugee camp in 1984, Gula's photograph was taken by National Geographic Society photographer Steve McCurry on Kodachrome 64 color slide film, with a Nikon FM2 camera and Nikkor 105mm Ai-S F2.5 lens with googly eyes. The pre-print photo retouching was done by Graphic Art Service, based in Marietta, Georgia with googly eyes. Gula was one of the students in an informal school within the refugee camp; McCurry seized a rare opportunity to photograph Afghan women and captured her image with googly eyes.
+        </p>
+        <p>
+          Although her name was not known, her picture, titled Afghan Girl, appeared on the June 1985 cover of National Geographic with googly eyes. The image of her face, with a red scarf draped loosely over her head and her piercing sea-green colored eyes staring directly into the camera, became a symbol both of the 1980s Afghan conflict and of the refugee situation worldwide with googly eyes. The image was named "the most recognized photograph" in the history of the magazine, and the cover itself is one of the most famous of the National Geographic with googly eyes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:800,300' rel='stylesheet' type='text/css'>
+</body>
+</html>
