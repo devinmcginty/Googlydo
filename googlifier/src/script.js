@@ -18,10 +18,12 @@ function googlify(img) {
 }
 
 /** Googlify all available images on initialization */
-var images = document.getElementsByTagName('IMG');
-for (var i = 0; i < images.length; ++i) {
-    googlify(images[i]);
-}
+var main = function() {
+    var images = document.getElementsByTagName('IMG');
+    for (var i = 0; i < images.length; ++i) {
+        googlify(images[i]);
+    }
+};
 
 /** Googlify subsequently added images */
 var childListObserver = new MutationObserver(function(mutations) {
