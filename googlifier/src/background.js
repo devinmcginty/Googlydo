@@ -19,6 +19,44 @@ function detectAndRescale(canvas, detector, ROI) {
     return rects;
 }
 
+
+function drawLeftEye(context, rect, choice) {
+    console.log(choice);
+    if (choice == 1) {
+        drawEye(context, rect);
+    } else if (choice == 2) {
+        drawLeftAnimeEye(context, rect);
+    }
+}
+
+function drawRightEye(context, rect, choice) {
+    console.log(choice);
+    if (choice == 1) {
+        drawEye(context, rect);
+    } else if (choice == 2) {
+        drawRightAnimeEye(context, rect);
+    }
+}
+
+
+function drawLeftAnimeEye(context, rect) {
+    var img = new Image();
+    img.src='img/eyes/anime-left.png'
+    console.log(rect);
+    //context.drawImage(img, rect[0], rect[0]+rect[2], rect[1], rect[1]+rect[3]);
+    context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
+}
+
+
+function drawRightAnimeEye(context, rect) {
+    var img = new Image();
+    img.src='img/eyes/anime-right.png'
+    console.log(rect);
+    //context.drawImage(img, rect[0], rect[0]+rect[2], rect[1], rect[1]+rect[3]);
+    context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
+}
+
+
 /** Draw googly eye within given rectangle and context.
     Params:
         context: 2d canvas drawing object
@@ -120,12 +158,15 @@ var goog = function(request, sender, sendResponse) {
                         leftEye  = detectAndRescale(canvas, eyeDetector, leftEyeROI )[0],
                         rightEye = detectAndRescale(canvas, eyeDetector, rightEyeROI)[0];
 
-                    if (leftEye)  drawEye(context, leftEye);
-                    if (rightEye) drawEye(context, rightEye);
+                                                      //two possibiilities
+                    var choice = Math.floor((Math.random() * 2) + 1);
+
+                    if (leftEye)  drawLeftEye(context, leftEye, choice);
+                    if (rightEye) drawRightEye(context, rightEye, choice);
 
                     // If only one eye is found, fill remaining ROI with googly eye
-                    if (leftEye  && !rightEye) drawEye(context, rightEyeROI);
-                    if (rightEye && !leftEye)  drawEye(context, leftEyeROI);
+                    if (leftEye  && !rightEye) drawRightEye(context, rightEyeROI, choice);
+                    if (rightEye && !leftEye)  drawLeftEye(context, leftEyeROI, choice);
                 }
 
                 sendResponse({
