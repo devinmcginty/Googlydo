@@ -25,13 +25,7 @@ function googlify(img) {
  */
 var main = function(image) {
     // var images = document.getElementsByTagName('IMG');
-    var img = document.createElement("IMG");
-    img.setAttribute("src", image);
-    img.setAttribute("width", "300");
-    img.crossOrigin = "Anonymous"; // Don't know what this means but it does things I guess
-    document.body.appendChild(img);
-    document.body.appendChild(document.createElement("BR"));
-    googlify(img);
+    googlify(image);
 };
 
 
