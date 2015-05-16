@@ -39,11 +39,11 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-body * {
-	box-sizing: border-box;
+* {
+	box-sizing: border-box !important;
 }
 
-.item { width: 400px; min-height: 200px; }
+.item { width: 380px; }
 
 
 .home-top {
@@ -62,19 +62,20 @@ body * {
 	margin: 0 auto;
 }
 .item {
+	overflow: hidden;
+	display: inline-block;
 }
 .item img{
 	width: 100%;
 	height: auto;
-	padding: 10px;
 	transition: all 0.25s;
+	padding: 10px;
 }
 .item img:hover{
-	opacity: 0.7;
 	background: black;
 	z-index: 1000;
 	position: relative;
-
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
 }
 .top-bar{
 	height: 5.5 rem;
