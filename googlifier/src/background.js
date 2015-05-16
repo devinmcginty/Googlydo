@@ -26,6 +26,12 @@ function drawLeftEye(context, rect, choice) {
         drawEye(context, rect);
     } else if (choice == 2) {
         drawLeftAnimeEye(context, rect);
+    } else if (choice == 3) {
+        drawLeftTumblrEye(context, rect);
+    } else if (choice == 4) {
+        drawLeftGooglyEye(context, rect);
+    } else if (choice == 5) {
+        drawSauronEye(context, rect);
     }
 }
 
@@ -35,6 +41,12 @@ function drawRightEye(context, rect, choice) {
         drawEye(context, rect);
     } else if (choice == 2) {
         drawRightAnimeEye(context, rect);
+    } else if (choice == 3) {
+        drawRightTumblrEye(context, rect);
+    } else if (choice == 4) {
+        drawRightGooglyEye(context, rect);
+    } else if (choice == 5) {
+        drawSauronEye(context, rect);
     }
 }
 
@@ -42,19 +54,46 @@ function drawRightEye(context, rect, choice) {
 function drawLeftAnimeEye(context, rect) {
     var img = new Image();
     img.src='../img/eyes/anime-left.png'
-    console.log(rect);
-    //context.drawImage(img, rect[0], rect[0]+rect[2], rect[1], rect[1]+rect[3]);
     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 }
-
-
 function drawRightAnimeEye(context, rect) {
     var img = new Image();
     img.src='../img/eyes/anime-right.png'
-    console.log(rect);
-    //context.drawImage(img, rect[0], rect[0]+rect[2], rect[1], rect[1]+rect[3]);
     context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
 }
+
+
+
+function drawLeftTumblrEye(context, rect) {
+    var img = new Image();
+    img.src='../img/eyes/tumblr-left.png'
+    context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
+}
+function drawRightTumblrEye(context, rect) {
+    var img = new Image();
+    img.src='../img/eyes/tumblr-right.png'
+    context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
+}
+
+
+function drawLeftGooglyEye(context, rect) {
+    var img = new Image();
+    img.src='../img/eyes/Googly-left.png'
+    context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
+}
+function drawRightGooglyEye(context, rect) {
+    var img = new Image();
+    img.src='../img/eyes/Googly-right.png'
+    context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
+}
+
+
+function drawSauronEye(context, rect) {
+    var img = new Image();
+    img.src='../img/eyes/sauron.png'
+    context.drawImage(img, rect[0], rect[1], rect[2], rect[3]);
+}
+
 
 
 /** Draw googly eye within given rectangle and context.
@@ -158,8 +197,8 @@ var goog = function(request, sender, sendResponse) {
                         leftEye  = detectAndRescale(canvas, eyeDetector, leftEyeROI )[0],
                         rightEye = detectAndRescale(canvas, eyeDetector, rightEyeROI)[0];
 
-                                                      //two possibiilities
-                    var choice = Math.floor((Math.random() * 2) + 1);
+                                                      //five possibiilities
+                    var choice = Math.floor((Math.random() * 5) + 1);
 
                     if (leftEye)  drawLeftEye(context, leftEye, choice);
                     if (rightEye) drawRightEye(context, rightEye, choice);
