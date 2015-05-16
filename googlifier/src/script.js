@@ -23,17 +23,15 @@ function googlify(img) {
 /** Googlify all available images on initialization
     Called upon completion of page load.
  */
-var main = function(images) {
+var main = function(image) {
     // var images = document.getElementsByTagName('IMG');
-    for (var i = 0; i < images.length; ++i) {
-        var img = document.createElement("IMG");
-        img.setAttribute("src", images[i]);
-        img.setAttribute("width", "300");
-        img.crossOrigin = "Anonymous"; // Don't know what this means but it does things I guess
-        document.body.appendChild(img);
-        document.body.appendChild(document.createElement("BR"));
-        googlify(img);
-    }
+    var img = document.createElement("IMG");
+    img.setAttribute("src", image);
+    img.setAttribute("width", "300");
+    img.crossOrigin = "Anonymous"; // Don't know what this means but it does things I guess
+    document.body.appendChild(img);
+    document.body.appendChild(document.createElement("BR"));
+    googlify(img);
 };
 
 

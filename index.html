@@ -19,7 +19,9 @@
 
       $(document).ready( function() {
         // do things here
-        main(images);
+        for (var i = 0; i < images.length; i += 1) {
+            main(images[i]);
+        };
       });
       </script>
     </head>
