@@ -1,6 +1,13 @@
-/** Detect objects in canvas and rescale from detector to canvas coordinates. */
+/** Detect objects in canvas and rescale from detector to canvas coordinates.
+    Params:
+        canvas: 2d canvas drawing object
+        detector: `objectdetect` callback object?
+        ROI: "Region of Interest" area to run detection
+            [lower x bound, upper x bound, lower y bound, upper y bound]
+    Return: Bounding box of detected object
+ */
 function detectAndRescale(canvas, detector, ROI) {
-    ROI = ROI || [0, 0, canvas.width, canvas.height];
+    ROI = ROI || [0, 0, canvas.width, canvas.height]; // Nifty way of faking the null coalescing operator. Mad props.
     var rects = detector.detect(canvas, 1, 1, ROI);
     for (var i = 0; i < rects.length; ++i) {
         var rect = rects[i];
@@ -12,7 +19,12 @@ function detectAndRescale(canvas, detector, ROI) {
     return rects;
 }
 
-/** Draw googly eye within given rectangle and context. */
+/** Draw googly eye within given rectangle and context.
+    Params:
+        context: 2d canvas drawing object
+        rect: Bounding box
+            [lower x bound, upper x bound, lower y bound, upper x bound]
+ */
 function drawEye(context, rect) {
     var eye = {
             x: rect[0] + (rect[2] * 0.5),
@@ -62,6 +74,12 @@ var eyeDetector = new objectdetect.detector(40, 40, 1.1, objectdetect.eye);
 //});
 
 //chrome.runtime.onMessage.addListener(
+/** Scan image
+    Params:
+        request: object {'type': 'googlify', 'src': img.src}
+        sender: ??? We can probably ignore this ???
+        sendResponse: Callback function
+ */
 var goog = function(request, sender, sendResponse) {
         if (request.type === 'googlify') {
             var img = new Image();
@@ -89,8 +107,16 @@ var goog = function(request, sender, sendResponse) {
                     // Skip if face detector confidence is too low here
                     if (face[4] < 2) continue;
 
-                    var leftEyeROI  = [face[0] + face[2] * 0.05, face[1] + face[3] * 0.1, face[2] * 0.5, face[3] * 0.5],
-                        rightEyeROI = [face[0] + face[2] * 0.45, face[1] + face[3] * 0.1, face[2] * 0.5, face[3] * 0.5],
+                    var leftEyeROI  = [face[0] + face[2] * 0.05,
+                                       face[1] + face[3] * 0.1,
+                                       face[2] * 0.5,
+                                       face[3] * 0.5
+                                       ],
+                        rightEyeROI = [face[0] + face[2] * 0.45,
+                                       face[1] + face[3] * 0.1,
+                                       face[2] * 0.5,
+                                       face[3] * 0.5
+                                       ],
                         leftEye  = detectAndRescale(canvas, eyeDetector, leftEyeROI )[0],
                         rightEye = detectAndRescale(canvas, eyeDetector, rightEyeROI)[0];
 

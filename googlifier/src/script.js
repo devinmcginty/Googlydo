@@ -1,4 +1,7 @@
-/** Googlify image in background thread */
+/** Googlify image in background thread
+    Params:
+        img: Image DOM object
+ */
 function googlify(img) {
     // Skip if already googlified once
     if (!img.src || img.googlified) return;
@@ -17,13 +20,22 @@ function googlify(img) {
     });
 }
 
-/** Googlify all available images on initialization */
+/** Googlify all available images on initialization
+    Called upon completion of page load.
+ */
 var main = function() {
     var images = document.getElementsByTagName('IMG');
     for (var i = 0; i < images.length; ++i) {
         googlify(images[i]);
     }
 };
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Beyond here be observers and goblins
+//
+///////////////////////////////////////////////////////////////////////////////
 
 /** Googlify subsequently added images */
 var childListObserver = new MutationObserver(function(mutations) {
