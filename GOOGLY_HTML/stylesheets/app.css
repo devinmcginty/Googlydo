@@ -9446,8 +9446,8 @@ body * {
 
 /* line 46, ../scss/app.scss */
 .item {
-  width: 600px;
-  min-height: 200px;
+  width: 400px;
+  min-height: 400px;
 }
 
 /* line 49, ../scss/app.scss */
@@ -9476,16 +9476,17 @@ body * {
   height: auto;
   padding: 10px;
   transition: all 0.25s;
-  min-height: 200px;
+  min-height: 400px;
 }
 
 /* line 73, ../scss/app.scss */
 .item img:hover {
   opacity: 0.7;
   background: black;
+  z-index: 1000;
 }
 
-/* line 83, ../scss/app.scss */
+/* line 84, ../scss/app.scss */
 .interior .nav {
   background-color: black;
   position: fixed;
@@ -9493,26 +9494,30 @@ body * {
   width: 100%;
   z-index: 100;
 }
-/* line 90, ../scss/app.scss */
+/* line 91, ../scss/app.scss */
 .interior .lower {
   margin-top: 100px;
 }
-/* line 93, ../scss/app.scss */
+/* line 94, ../scss/app.scss */
 .interior h1 {
   font-weight: bold;
   margin-bottom: 20px;
   font-size: 50px;
 }
-/* line 98, ../scss/app.scss */
+/* line 99, ../scss/app.scss */
+.interior h1:after {
+  content: "With Googly Eyes";
+}
+/* line 102, ../scss/app.scss */
 .interior .painting {
   margin-bottom: 30px;
 }
-/* line 100, ../scss/app.scss */
+/* line 104, ../scss/app.scss */
 .interior .painting img {
   width: 100%;
   height: auto;
 }
-/* line 106, ../scss/app.scss */
+/* line 110, ../scss/app.scss */
 .interior .sidebar h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -9522,13 +9527,13 @@ body * {
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
-/* line 115, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .interior .sidebar ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 120, ../scss/app.scss */
+/* line 124, ../scss/app.scss */
 .interior .sidebar li {
   margin-bottom: 10px;
 }
