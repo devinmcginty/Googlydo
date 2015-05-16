@@ -7877,7 +7877,7 @@ a img {
 /* line 234, ../bower_components/foundation/scss/foundation/components/_type.scss */
 p {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.6;
   margin-bottom: 1.25rem;
@@ -7885,7 +7885,7 @@ p {
 }
 /* line 242, ../bower_components/foundation/scss/foundation/components/_type.scss */
 p.lead {
-  font-size: 1.21875rem;
+  font-size: 1.61875rem;
   line-height: 1.6;
 }
 /* line 244, ../bower_components/foundation/scss/foundation/components/_type.scss */
@@ -7916,7 +7916,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 /* line 269, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1 {
-  font-size: 2.125rem;
+  font-size: 2.8125rem;
 }
 
 /* line 270, ../bower_components/foundation/scss/foundation/components/_type.scss */
@@ -8001,7 +8001,7 @@ ul,
 ol,
 dl {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   list-style-position: outside;
   margin-bottom: 1.25rem;
@@ -8166,7 +8166,7 @@ blockquote p {
 
   /* line 456, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h1 {
-    font-size: 2.75rem;
+    font-size: 3.4375rem;
   }
 
   /* line 457, ../bower_components/foundation/scss/foundation/components/_type.scss */
@@ -9481,4 +9481,52 @@ body * {
 .item img:hover {
   opacity: 0.7;
   background: black;
+}
+
+/* line 82, ../scss/app.scss */
+.interior .nav {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* line 89, ../scss/app.scss */
+.interior .lower {
+  margin-top: 100px;
+}
+/* line 92, ../scss/app.scss */
+.interior h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+/* line 97, ../scss/app.scss */
+.interior .painting {
+  margin-bottom: 30px;
+}
+/* line 99, ../scss/app.scss */
+.interior .painting img {
+  width: 100%;
+  height: auto;
+}
+/* line 105, ../scss/app.scss */
+.interior .sidebar h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+/* line 114, ../scss/app.scss */
+.interior .sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 119, ../scss/app.scss */
+.interior .sidebar li {
+  margin-bottom: 10px;
 }
