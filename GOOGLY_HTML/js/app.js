@@ -4,6 +4,6 @@ $(document).foundation();
 var container = document.querySelector('#container');
 var msnry = new Masonry( container, {
   // options
-  columnWidth: 400,
+  columnWidth: 600,
   itemSelector: '.item'
 });
