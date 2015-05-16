@@ -182,7 +182,7 @@ var goog = function(request, sender, sendResponse) {
                     var face = faces[i];
 
                     // Skip if face detector confidence is too low here
-                    if (face[4] < 2) continue;
+                    // if (face[4] < 2) continue;
 
                     var leftEyeROI  = [face[0] + face[2] * 0.05,
                                        face[1] + face[3] * 0.1,
@@ -204,8 +204,8 @@ var goog = function(request, sender, sendResponse) {
                     if (rightEye) drawRightEye(context, rightEye, choice);
 
                     // If only one eye is found, fill remaining ROI with googly eye
-                    if (leftEye  && !rightEye) drawRightEye(context, rightEyeROI, choice);
-                    if (rightEye && !leftEye)  drawLeftEye(context, leftEyeROI, choice);
+                    if (!rightEye) drawRightEye(context, rightEyeROI, choice);
+                    if (!leftEye)  drawLeftEye(context, leftEyeROI, choice);
                 }
 
                 sendResponse({
