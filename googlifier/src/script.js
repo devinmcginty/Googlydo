@@ -8,7 +8,9 @@ function googlify(img) {
     goog({
         'type': 'googlify',
         'src': img.src
-    }, function(response) {
+    },
+    "sender", //this doesn't seem to be used
+    function(response) {
         if (response.googlified) {
             img.src = response.googlified;
         }
@@ -36,7 +38,9 @@ var childListObserver = new MutationObserver(function(mutations) {
     });
 });
 
-childListObserver.observe(document.body, {childList: true, subtree: true});
+
+
+//childListObserver.observe(document.body, {childList: true, subtree: true});
 
 /** Googlify subsequently modified images with new src */
 var attributeObserver = new MutationObserver(function(mutations) {
@@ -47,4 +51,4 @@ var attributeObserver = new MutationObserver(function(mutations) {
     });
 });
 
-attributeObserver.observe(document.body, {attributes: true,    subtree: true});
+//attributeObserver.observe(document.body, {attributes: true,    subtree: true});
