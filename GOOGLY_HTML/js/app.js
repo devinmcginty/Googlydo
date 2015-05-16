@@ -9,12 +9,12 @@ var masonryGo = function() {
       itemSelector: '.item'
     });
 };
-=======
+// =======
 
-var container = document.querySelector('#container');
-var msnry = new Masonry( container, {
-  // options
-  columnWidth: 400,
-  itemSelector: '.item'
-});
->>>>>>> Stashed changes
+// var container = document.querySelector('#container');
+// var msnry = new Masonry( container, {
+//   // options
+//   columnWidth: 400,
+//   itemSelector: '.item'
+// });
+// >>>>>>> Stashed changes
