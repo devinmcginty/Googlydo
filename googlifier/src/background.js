@@ -54,15 +54,15 @@ function drawEye(context, rect) {
 /** Reusable eye detector of fixed 50x50 px resolution */
 var eyeDetector = new objectdetect.detector(40, 40, 1.1, objectdetect.eye);
 
-chrome.browserAction.onClicked.addListener(function (tab) { // Fired when user clicks icon
-    chrome.tabs.executeScript(tab.id, {
-        'file': 'src/script.js'
-    });
-    chrome.browserAction.disable(tab.id);
-});
+//chrome.browserAction.onClicked.addListener(function (tab) { // Fired when user clicks icon
+//    chrome.tabs.executeScript(tab.id, {
+//        'file': 'src/script.js'
+//    });
+//    chrome.browserAction.disable(tab.id);
+//});
 
-chrome.runtime.onMessage.addListener(
-    function (request, sender, sendResponse) {
+//chrome.runtime.onMessage.addListener(
+var goog = function(request, sender, sendResponse) {
         if (request.type === 'googlify') {
             var img = new Image();
 
@@ -110,5 +110,5 @@ chrome.runtime.onMessage.addListener(
             img.src = request.src;
         }
         return true;
-    }
-);
+    };
+

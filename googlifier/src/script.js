@@ -5,7 +5,7 @@ function googlify(img) {
     img.googlified = true;
 
     // Perform googlification in background
-    chrome.runtime.sendMessage({
+    goog({
         'type': 'googlify',
         'src': img.src
     }, function(response) {
